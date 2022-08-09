@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Books</title>
+    <title>Awesome Books | Waris</title>
   </head>
   <body>
     <h1>Awesome Books</h1>
-    <div class="book">
-      <p class="book-name"></p>
-      <p class="author-name"></p>
-    </div>
-
-    <form action="/" method="post">
-      <input type="text" placeholder="Title" /> <br />
-      <input type="text" placeholder="Author" /> <br />
+    <div class="books"></div>
+    <form method="post" class="addBook">
+      <input type="text" name="title" id="title" placeholder="Title" required />
+      <input type="text" name="author" id="author" placeholder="Author" required />
       <button type="submit">Add</button>
     </form>
+
+    <script src="index.js"></script>
   </body>
 </html>
