@@ -33,5 +33,20 @@ function showBooks() {
   }
 }
 
+function addBook(e) {
+  const book = {
+    title: bookTitle.value,
+    author: bookAuthor.value,
+  };
+  booksArr.push(book);
+  localStorage.setItem('books', JSON.stringify(booksArr));
+  e.preventDefault();
+  bookTitle.value = '';
+  bookAuthor.value = '';
+  showBooks();
+}
+
 fetchBooks();
 showBooks();
+
+form.addEventListener('submit', addBook);
