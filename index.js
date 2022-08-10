@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 const form = document.querySelector('form');
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -9,16 +10,16 @@ class Book {
 
 class Storage {
   static BooksFromStorage() {
-    let booksArr;
+    let books;
     if (localStorage.getItem('books') === null) {
-      booksArr = [];
+      books = [];
     } else {
-      booksArr = JSON.parse(localStorage.getItem('books'));
+      books = JSON.parse(localStorage.getItem('books'));
     }
-    return booksArr;
+    return books;
   }
 
-  static addBooksToStorage(book) {
+  static BooksToStorage(book) {
     const books = Storage.BooksFromStorage();
 
     books.push(book);
@@ -26,11 +27,11 @@ class Storage {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBooksFromStorage(title) {
+  static removeFromStorage(author) {
     const books = Storage.BooksFromStorage();
 
     books.forEach((book, i) => {
-      if (book.title === title) {
+      if (book.author === author) {
         books.splice(i, 1);
       }
     });
@@ -43,10 +44,10 @@ class BooksToDom {
   static displayBooksInDom() {
     const books = Storage.BooksFromStorage();
 
-    books.forEach((book) => BooksToDom.domBooksList(book));
+    books.forEach((book) => BooksToDom.BooksList(book));
   }
 
-  static domBooksList(book) {
+  static BooksList(book) {
     const tbody = document.querySelector('#tbody');
     const tableRow = document.createElement('tr');
 
@@ -54,13 +55,13 @@ class BooksToDom {
     <td>${`"${book.title}"`}</td>
     <td>by</td>
     <td>${book.author}</td>
-    <td><a href="#" class='RemoveBtn'>Remove</a></td>
+    <td><a href="#" class='rm-button'>Remove</a></td>
     `;
     tbody.appendChild(tableRow);
   }
 
   static deleteBook(el) {
-    if (el.classList.contains('RemoveBtn')) {
+    if (el.classList.contains('rm-button')) {
       el.parentElement.parentElement.remove();
     }
   }
@@ -81,9 +82,9 @@ form.addEventListener('submit', (e) => {
 
   const book = new Book(title, author);
 
-  BooksToDom.domBooksList(book);
+  BooksToDom.BooksList(book);
 
-  Storage.addBooksToStorage(book);
+  Storage.BooksToStorage(book);
 
   BooksToDom.clearField();
 });
@@ -91,7 +92,7 @@ form.addEventListener('submit', (e) => {
 document.querySelector('#tbody').addEventListener('click', (e) => {
   BooksToDom.deleteBook(e.target);
 
-  Storage.removeBooksFromStorage(
+  Storage.removeFromStorage(
     e.target.parentElement.previousElementSibling.textContent,
   );
 });
