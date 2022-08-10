@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Awesome Books</h1>
-    <div class="books"></div>
-    <form method="post" class="addBookForm">
-      <input
-        type="text"
-        name="title"
-        id="book-title"
-        placeholder="Title"
-        required
-      />
-      <input
-        type="text"
-        name="author"
-        id="book-author"
-        placeholder="Author"
-        required
-      />
-      <button type="submit">Add</button>
-    </form>
+    <h1>All Awesome Books</h1>
+    <table>
+      <tbody class="tbody" id="tbody"></tbody>
+    </table>
+
+    <div class="hr-line"></div>
+
+    <div class="form">
+      <h2>Add a new book</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Title" id="book-title" required />
+        <br />
+        <input type="text" placeholder="Author" id="book-author" required />
+        <br />
+        <button>Add</button>
+      </form>
+    </div>
 
     <script src="index.js"></script>
   </body>
