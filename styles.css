@@ -1,4 +1,63 @@
+body {
+  font-family: monospace;
+}
+
+table {
+  margin: auto;
+  border: 5px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  width: 30%;
+}
+
+table td {
+  font-size: larger;
+  font-weight: 700;
+}
+
+table td:first-child {
+  padding-left: 8px;
+}
+
+table tr:nth-child(odd) {
+  background-color: rgb(212, 211, 211);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  float: right;
+  margin: 5px 5px;
+  border: 1px solid rgb(212, 211, 211);
+  padding: 2px 8px;
+}
+
+.hr-line {
+  width: 10%;
+  height: 3px;
+  background-color: rgb(212, 211, 211);
+  margin: 40px auto;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 input {
-  display: block;
   margin-bottom: 10px;
+}
+
+form button {
+  display: flex;
+  margin: 0 0 0 auto;
+  padding: 2px 8px;
 }
