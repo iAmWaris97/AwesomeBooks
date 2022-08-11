@@ -6,11 +6,40 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 body {
   font-family: monospace;
 }
 
-a {
+.hide {
+  display: none;
+}
+
+.rm-button {
   text-decoration: none;
   background-color: white;
   color: black;

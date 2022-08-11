@@ -8,23 +8,64 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>All Awesome Books</h1>
-    <table>
-      <tbody class="tbody" id="tbody"></tbody>
-    </table>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="logo">Awesome Books</a>
+        <ul class="nav-menu">
+          <li class="nav-link">
+            <a href="#">List</a>
+          </li>
+          <li class="separator">|</li>
+          <li class="nav-link">
+            <a href="#">List</a>
+          </li>
+          <li class="separator">|</li>
+          <li class="nav-link">
+            <a href="#">List</a>
+          </li>
+        </ul>
+      </nav>
+      <div>Time Here</div>
+    </header>
 
-    <div class="hr-line"></div>
+    <main>
+      <section>
+        <h1>All Awesome Books</h1>
+        <table>
+          <tbody class="tbody" id="tbody"></tbody>
+        </table>
+        <p class="empty hide">Your book list is Empty, kindly add books</p>
+      </section>
 
-    <h2>Add a new book</h2>
-    <div class="form">
-      <form action="#" method="POST">
-        <input type="text" placeholder="Title" id="book-title" required />
-        <br />
-        <input type="text" placeholder="Author" id="book-author" required />
-        <br />
-        <button type="submit">Add</button>
-      </form>
-    </div>
+      <section class="add hide">
+        <h2>Add a new book</h2>
+        <div class="form">
+          <form action="#" method="POST">
+            <input type="text" placeholder="Title" id="book-title" required />
+            <br />
+            <input type="text" placeholder="Author" id="book-author" required />
+            <br />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contactus hide">
+        <div class="contactus-detal">
+          <h2>Contact Information</h2>
+          <p>Do you have any questions or you just want to say "Hello?"</p>
+          <p>you can reach out to us!</p>
+          <ul>
+            <li>our email : waris@email.dev | norman@email.dev</li>
+            <li>our Phone number : 001-111-1111</li>
+            <li>our address: Streetname 11, 10001 city, Silicon Valley</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; MIT iAmWaris | iAmNorman</p>
+    </footer>
 
     <script src="index.js"></script>
   </body>
