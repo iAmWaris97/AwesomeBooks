@@ -6,11 +6,83 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: monospace;
+a {
+  text-decoration: none;
 }
 
-a {
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  margin: 0 auto;
+  border: 4px solid #000;
+  padding: 0.3em;
+  margin-top: 10px;
+}
+
+.logo {
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: 'Mouse Memoirs', sans-serif;
+  color: blue;
+  margin-left: 8px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin: 0 5px;
+}
+
+.nav-link {
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  color: blue;
+}
+
+.time {
+  position: absolute;
+  top: 72px;
+  right: 12px;
+  font-weight: 600;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  font-family: 'Mouse Memoirs', sans-serif;
+  text-align: center;
+  line-height: 2em;
+  font-size: 2.5em;
+}
+
+.rm-button {
   text-decoration: none;
   background-color: white;
   color: black;
@@ -20,18 +92,9 @@ a {
   padding: 2px 8px;
 }
 
-h1 {
-  font-family: 'Mouse Memoirs', sans-serif;
+.empty {
   text-align: center;
-  line-height: 2em;
-  font-size: 3em;
-}
-
-h2 {
-  font-family: 'Mouse Memoirs', sans-serif;
-  text-align: center;
-  line-height: 2em;
-  font-size: 2.5em;
+  font-weight: 600;
 }
 
 table {
@@ -43,22 +106,21 @@ table {
 
 table td {
   font-size: larger;
-  font-weight: 700;
+  font-weight: 600;
+  text-align: left;
 }
 
 table td:first-child {
   padding-left: 8px;
 }
 
-table tr:nth-child(odd) {
-  background-color: rgb(212, 211, 211);
+table td:nth-child(2) {
+  padding: 0 20px;
+  font-style: italic;
 }
 
-.hr-line {
-  width: 10%;
-  height: 3px;
+table tr:nth-child(odd) {
   background-color: rgb(212, 211, 211);
-  margin: 40px auto;
 }
 
 .form {
@@ -86,4 +148,26 @@ form button {
   outline: none;
   border: 2px solid rgb(112, 110, 110);
   box-shadow: 3px 3px rgb(112, 110, 110);
+}
+
+.contact-details {
+  text-align: center;
+}
+
+.contact-details p,
+.contact-details ul {
+  font-size: larger;
+  font-weight: 600;
+  line-height: 2em;
+}
+
+footer {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  font-weight: 600;
 }
