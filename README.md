@@ -4,11 +4,13 @@
 
 > Js Project to create CRUD Book List
 
+![Project Screenshot](./img/snapshot.PNG "Portfolio Project")
 
 ## Built With
 
 - JS
 - HTML
+- CSS
 
 
 ## Getting Started
