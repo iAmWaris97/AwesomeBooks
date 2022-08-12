@@ -53,11 +53,13 @@ header {
   font-weight: 600;
 }
 
-.nav-link:active, .nav-link:focus, .nav-link:hover {
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
   color: blue;
 }
 
-.time{
+.time {
   position: absolute;
   top: 72px;
   right: 12px;
@@ -152,7 +154,8 @@ form button {
   text-align: center;
 }
 
-.contact-details p, .contact-details ul{
+.contact-details p,
+.contact-details ul {
   font-size: larger;
   font-weight: 600;
   line-height: 2em;
