@@ -10,34 +10,38 @@
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="#" class="logo">Awesome Books</a>
+        <a href="#list" class="logo">Awesome Books</a>
         <ul class="nav-menu">
-          <li class="nav-link">
-            <a href="#">List</a>
+          <li class="nav-item">
+            <a href="#" class="nav-list nav-link">List</a>
           </li>
           <li class="separator">|</li>
-          <li class="nav-link">
-            <a href="#">List</a>
+          <li class="nav-item">
+            <a href="#" class="nav-add nav-link">Add New</a>
           </li>
           <li class="separator">|</li>
-          <li class="nav-link">
-            <a href="#">List</a>
+          <li class="nav-item">
+            <a href="#" class="nav-contact nav-link">Contact</a>
           </li>
         </ul>
       </nav>
-      <div>Time Here</div>
+      <div class="time">
+        <time>Time Here</time>
+      </div>
     </header>
 
     <main>
-      <section>
+      <!-- list section -->
+      <section class="list main" id="list">
         <h1>All Awesome Books</h1>
         <table>
           <tbody class="tbody" id="tbody"></tbody>
         </table>
-        <p class="empty hide">Your book list is Empty, kindly add books</p>
+        <p class="empty hide">Books list is Empty, Add some books!</p>
       </section>
 
-      <section class="add hide">
+      <!-- add book section -->
+      <section class="add main hide">
         <h1>Add a new book</h1>
         <div class="form">
           <form action="#" method="POST">
@@ -50,8 +54,9 @@
         </div>
       </section>
 
-      <section class="contactus hide">
-        <div class="contactus-detal">
+      <!-- contact section -->
+      <section class="contact main hide">
+        <div class="contact-details">
           <h1>Contact Information</h1>
           <p>Do you have any questions or you just want to say "Hello?"</p>
           <p>you can reach out to us!</p>
@@ -63,6 +68,8 @@
         </div>
       </section>
     </main>
+
+    <!-- footer -->
     <footer>
       <p>&copy; MIT iAmWaris | iAmNorman</p>
     </footer>
